@@ -14,9 +14,9 @@ namespace MDPi.Core.Services.ServerInteractionServices
         {
         }
 
-        public Task<ServerQuery> FetchServerInformation()
+        public async Task<ServerQuery> FetchServerInformation()
         {
-            return JsonConvert.DeserializeObjectAsync<ServerQuery>(MDPi.Core.Properties.Resources.ServerQueryTestResult);
+            return await Task.Factory.StartNew(() => JsonConvert.DeserializeObject<ServerQuery>(MDPi.Core.Properties.Resources.ServerQueryTestResult));
         }
     }
 }

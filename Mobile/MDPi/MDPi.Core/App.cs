@@ -1,4 +1,5 @@
 using Cirrious.CrossCore.IoC;
+using MDPi.Core.Services.ServerInteractionServices;
 
 namespace MDPi.Core
 {
@@ -10,7 +11,8 @@ namespace MDPi.Core
                 .EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
-				
+
+            MvxSimpleIoCContainer.Instance.RegisterType<IServerCommunicationService, DummyServerCommunicationService>();
             RegisterAppStart<ViewModels.FirstViewModel>();
         }
     }

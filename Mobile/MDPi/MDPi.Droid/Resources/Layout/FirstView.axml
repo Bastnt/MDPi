@@ -4,16 +4,23 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-  <EditText
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:textSize="40dp"
-    local:MvxBind="Text Hello"
-    />
-  <TextView
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:textSize="40dp"
-    local:MvxBind="Text Hello"
-    />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        android:text="Current tracked torrents" />
+    <View
+        android:id="@+id/separator2"
+        android:background="#ff888888"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_centerVertical="true"
+        android:layout_alignParentTop="true" />
+    <Mvx.MvxListView
+        android:id="@+id/AnimeList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        local:MvxBind="ItemsSource Torrents"
+        local:MvxItemTemplate="@layout/item_anime" />
 </LinearLayout>

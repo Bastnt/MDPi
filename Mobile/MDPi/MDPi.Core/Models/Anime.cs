@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +9,12 @@ namespace MDPi.Core.Models
 {
     public class Anime
     {
-        private int Id { get; set; }
-        private string Name { get; set; }
-        private string HitRegex { get; set; }
-        private string DownloadRegex { get; set; }
-        private int Count { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        [JsonProperty("hit_regex")]
+        public string HitRegex { get; set; }
+        [JsonProperty("dl_regex")]
+        public string DownloadRegex { get; set; }
+        public int Count { get; set; }
     }
 }
