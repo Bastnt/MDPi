@@ -9,6 +9,7 @@ namespace MDPi.Core.Services.ServerInteractionServices
 {
     public interface IServerCommunicationService
     {
-        Task<ServerQuery> FetchServerInformation();
+        Task<ServerQuery> FetchPersonalServerInformation();
+        Task<ServerQuery> FetchAllServerInformation();
     }
 }

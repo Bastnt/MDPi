@@ -5,37 +5,24 @@ using System.Collections.Generic;
 
 namespace MDPi.Core.ViewModels
 {
-    public class FirstViewModel 
-		: MvxViewModel
+    public class FirstViewModel : MvxViewModel
     {
-        private IServerCommunicationService communicationService;
+        private readonly TorrentsViewModel torrentsViewModel;
+        private readonly BrowseViewModel browseViewModel;
 
         public FirstViewModel(IServerCommunicationService service)
         {
-            this.communicationService = service;
-            UpdateData();
+            torrentsViewModel = new TorrentsViewModel(service);
+            browseViewModel = new BrowseViewModel(service);
         }
 
-        private bool isUpdating = true;
-        public bool IsUpdating
+        public TorrentsViewModel TorrentsViewModel
         {
-            get { return isUpdating; }
-            set { isUpdating = value; RaisePropertyChanged(() => IsUpdating); }
+            get { return torrentsViewModel; }
         }
-
-        private IList<Anime> torrents;
-        public IList<Anime> Torrents
+        public BrowseViewModel BrowseViewModel
         {
-            get { return torrents; }
-            set { torrents = value; RaisePropertyChanged(() => Torrents); }
-        }
-
-        private async void UpdateData()
-        {
-            IsUpdating = true;
-            var result = await communicationService.FetchServerInformation();
-            Torrents = result.Torrents;
-            IsUpdating = false;
+            get { return browseViewModel; }
         }
     }
 }

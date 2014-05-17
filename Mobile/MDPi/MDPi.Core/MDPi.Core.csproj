@@ -48,7 +48,9 @@
     </Compile>
     <Compile Include="Services\ServerInteractionServices\DummyServerCommunicationService.cs" />
     <Compile Include="Services\ServerInteractionServices\IServerCommunicationService.cs" />
+    <Compile Include="ViewModels\BrowseViewModel.cs" />
     <Compile Include="ViewModels\FirstViewModel.cs" />
+    <Compile Include="ViewModels\TorrentsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Cirrious.CrossCore">

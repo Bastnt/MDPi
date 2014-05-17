@@ -14,7 +14,12 @@ namespace MDPi.Core.Services.ServerInteractionServices
         {
         }
 
-        public async Task<ServerQuery> FetchServerInformation()
+        public async Task<ServerQuery> FetchPersonalServerInformation()
+        {
+            return await Task.Factory.StartNew(() => JsonConvert.DeserializeObject<ServerQuery>(MDPi.Core.Properties.Resources.ServerQueryTestResult));
+        }
+
+        public async Task<ServerQuery> FetchAllServerInformation()
         {
             return await Task.Factory.StartNew(() => JsonConvert.DeserializeObject<ServerQuery>(MDPi.Core.Properties.Resources.ServerQueryTestResult));
         }

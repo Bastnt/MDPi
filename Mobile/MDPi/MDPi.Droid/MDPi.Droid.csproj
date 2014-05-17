@@ -26,7 +26,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
     <AndroidLinkMode>None</AndroidLinkMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -37,7 +36,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
-    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Cirrious.CrossCore">
@@ -58,29 +56,34 @@
     <Reference Include="Cirrious.MvvmCross.Droid">
       <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.1.1\lib\MonoAndroid\Cirrious.MvvmCross.Droid.dll</HintPath>
     </Reference>
+    <Reference Include="Cirrious.MvvmCross.Droid.Fragging">
+      <HintPath>..\packages\MvvmCross.HotTuna.Droid.Fragging.3.1.1\lib\MonoAndroid\Cirrious.MvvmCross.Droid.Fragging.dll</HintPath>
+    </Reference>
     <Reference Include="Cirrious.MvvmCross.Localization">
       <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.1.1\lib\MonoAndroid\Cirrious.MvvmCross.Localization.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.PortableSupport.3.1.1\lib\MonoAndroid\System.Net.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Windows, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MvvmCross.PortableSupport.3.1.1\lib\MonoAndroid\System.Windows.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Serialization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="System.Net">
+      <HintPath>..\packages\MvvmCross.PortableSupport.3.1.1\lib\MonoAndroid\System.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows">
+      <HintPath>..\packages\MvvmCross.PortableSupport.3.1.1\lib\MonoAndroid\System.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Serialization">
       <HintPath>..\packages\MvvmCross.PortableSupport.3.1.1\lib\MonoAndroid\System.Xml.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\Components\xamandroidsupportv4-18-19.1.0\lib\android\Xamarin.Android.Support.v4.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapters\MvxViewPagerFragmentAdapter.cs" />
     <Compile Include="DebugTrace.cs" />
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -88,6 +91,8 @@
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreen.cs" />
     <Compile Include="Views\FirstView.cs" />
+    <Compile Include="Views\BrowseView.cs" />
+    <Compile Include="Views\TorrentsView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -98,9 +103,13 @@
     <AndroidResource Include="Resources\Layout\item_anime.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Layout\Main.axml" />
+    <AndroidResource Include="Resources\Layout\TorrentsView.axml" />
+    <AndroidResource Include="Resources\Layout\item_menu.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\BrowseView.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Values\Strings.xml" />
@@ -113,12 +122,26 @@
     <AndroidResource Include="Resources\Values\SplashStyle.xml" />
     <AndroidResource Include="Resources\Values\MvxBindingAttributes.xml" />
     <AndroidResource Include="Resources\Drawable\splash.png" />
+    <AndroidResource Include="Resources\Drawable\bg_card.xml" />
+    <AndroidResource Include="Resources\Drawable\bg_card_normal.xml" />
+    <AndroidResource Include="Resources\Drawable\bg_card_pressed.xml" />
+    <AndroidResource Include="Resources\Values\colors.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MDPi.Core\MDPi.Core.csproj">
-      <Project>{059659bb-0970-4898-8bdf-040b65823369}</Project>
+      <Project>{059659BB-0970-4898-8BDF-040B65823369}</Project>
       <Name>MDPi.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PagerSlidingTabStrip\PagerSlidingTabStrip.csproj">
+      <Project>{b90cf8ba-41f6-4493-a8b8-424928272c90}</Project>
+      <Name>PagerSlidingTabStrip</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="xamandroidsupportv4-18">
+      <Version>19.1.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

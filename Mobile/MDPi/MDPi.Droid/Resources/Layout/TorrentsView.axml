@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        android:text="Current tracked torrents" />
+    <View
+        android:id="@+id/separator2"
+        android:background="#ff888888"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_centerVertical="true"
+        android:layout_alignParentTop="true" />
+    <Mvx.MvxListView
+        android:id="@+id/AnimeList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="8dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:clipToPadding="false"
+        android:dividerHeight="4dp"
+        android:divider="@android:color/transparent"
+        local:MvxBind="ItemsSource Torrents"
+        local:MvxItemTemplate="@layout/item_anime" />
+</LinearLayout>

@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MDPi.Droid\Views\FirstView.cs">
+    <Files>
+      <File FileName="MDPi.Droid\Views\FirstView.cs" Line="19" Column="2" />
+      <File FileName="MDPi.Droid\Adapters\MvxViewPagerFragmentAdapter.cs" Line="1" Column="1" />
+      <File FileName="MDPi.Core\ViewModels\TorrentsViewModel.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\Richard\Documents\GitHub\MDPi\Mobile\MDPi\MDPi.Droid\Views\FirstView.cs" line="48" column="1" />
+      <Breakpoint file="C:\Users\Richard\Documents\GitHub\MDPi\Mobile\MDPi\MDPi.Core\ViewModels\TorrentsViewModel.cs" line="38" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.MDPi.Droid MonoForAntroid.PreferredDevice="3.7&quot; WVGA (Nexus One)" />
+</Properties>
