@@ -9,6 +9,8 @@
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:gravity="center_horizontal"
+        android:fontFamily="sans-serif"
+        android:padding="4dp"
         android:text="Current tracked torrents" />
     <View
         android:id="@+id/separator2"

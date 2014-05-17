@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:textSize="30sp"
         local:MvxBind="Text Name"
+        android:fontFamily="sans-serif-light"
         android:textAppearance="?android:attr/textAppearanceLarge" />
     <TextView
         android:layout_width="fill_parent"
