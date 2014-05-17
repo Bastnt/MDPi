@@ -19,10 +19,11 @@ using Cirrious.CrossCore;
 using MDPi.Core.Services.ServerInteractionServices;
 using Android.Graphics.Drawables;
 using Android.Support.V4.Widget;
+using Android.Content.PM;
 
 namespace MDPi.Droid.Views
 {
-    [Activity(Label = "View for FirstViewModel", Theme = "@android:style/Theme.Holo.Light")]
+    [Activity(Label = "View for FirstViewModel", Theme = "@android:style/Theme.Holo.Light", ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize | ConfigChanges.KeyboardHidden)]
 	public class FirstView : MvxFragmentActivity
     {
         // PagerSlidingTabStrip and ViewPager initialisation
