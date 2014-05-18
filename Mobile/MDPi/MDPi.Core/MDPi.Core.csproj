@@ -38,7 +38,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
-    <Compile Include="Models\ServerQuery.cs" />
+    <Compile Include="Models\NewAnime.cs" />
+    <Compile Include="Models\ServerQuerySubmit.cs" />
+    <Compile Include="Models\ServerQueryResult.cs" />
     <Compile Include="Models\Anime.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -48,6 +50,7 @@
     </Compile>
     <Compile Include="Services\ServerInteractionServices\DummyServerCommunicationService.cs" />
     <Compile Include="Services\ServerInteractionServices\IServerCommunicationService.cs" />
+    <Compile Include="ViewModels\AddTorrentViewModel.cs" />
     <Compile Include="ViewModels\BrowseViewModel.cs" />
     <Compile Include="ViewModels\FirstViewModel.cs" />
     <Compile Include="ViewModels\TorrentsViewModel.cs" />

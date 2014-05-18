@@ -99,6 +99,7 @@
     <Compile Include="SplashScreen.cs" />
     <Compile Include="Views\FirstView.cs" />
     <Compile Include="Views\BrowseView.cs" />
+    <Compile Include="Views\AddTorrentView.cs" />
     <Compile Include="Views\TorrentsView.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +118,9 @@
     <AndroidResource Include="Resources\Layout\BrowseView.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\Layout\AddTorrentView.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Values\Strings.xml" />
@@ -133,6 +137,9 @@
     <AndroidResource Include="Resources\Drawable\bg_card_normal.xml" />
     <AndroidResource Include="Resources\Drawable\bg_card_pressed.xml" />
     <AndroidResource Include="Resources\Values\colors.xml" />
+    <AndroidResource Include="Resources\Menu\ActionBar.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MDPi.Core\MDPi.Core.csproj">

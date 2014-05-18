@@ -23,9 +23,11 @@ using Android.Content.PM;
 
 namespace MDPi.Droid.Views
 {
-    [Activity(Label = "View for FirstViewModel", Theme = "@android:style/Theme.Holo.Light", ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize | ConfigChanges.KeyboardHidden)]
+    [Activity(Label = "MDPi", Theme = "@android:style/Theme.Holo.Light", ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize | ConfigChanges.KeyboardHidden)]
 	public class FirstView : MvxFragmentActivity
     {
+        private const string TorrentDialogTagName = "Add Torrent";
+
         // PagerSlidingTabStrip and ViewPager initialisation
         private ViewPager viewPager;
         private PagerSlidingTabStrip.PagerSlidingTabStrip pageIndicator;
@@ -35,6 +37,12 @@ namespace MDPi.Droid.Views
         {
 			base.OnCreate(bundle);
 			SetContentView(Resource.Layout.FirstView);
+
+            var existingDialog = (AddTorrentView)SupportFragmentManager.FindFragmentByTag(TorrentDialogTagName);
+            if (existingDialog != null)
+            {
+                existingDialog.ViewModel = ((FirstViewModel)ViewModel).AddTorrentViewModel;
+            }
 
             // PagerSlidingTabStrip and ViewPager initialisation
 			var fragments = new List<MvxViewPagerFragmentAdapter.FragmentInfo> {
@@ -62,6 +70,35 @@ namespace MDPi.Droid.Views
 
             //Set the pager to the tabs control:
             pageIndicator.SetViewPager(viewPager);
+        }
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.ActionBar, menu);
+
+            var addTorrentMenuItem = menu.FindItem(Resource.Id.addTorrentMenuItem);
+            return true;
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+
+                case Resource.Id.addTorrentMenuItem:
+                    ShowDialog();
+                    return true;
+
+                default:
+                    return base.OnOptionsItemSelected(item);
+            }
+        }
+
+        public void ShowDialog()
+        {
+            var dialog = new AddTorrentView();
+            dialog.ViewModel = ((FirstViewModel)ViewModel).AddTorrentViewModel;
+            dialog.Show(SupportFragmentManager, TorrentDialogTagName);
         }
     }
 }

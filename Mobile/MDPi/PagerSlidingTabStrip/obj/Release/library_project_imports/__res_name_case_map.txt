@@ -1,0 +1,5 @@
+layout/pagerslidingtabstrip_texttab.axml;layout/pagerslidingtabstrip_texttab.xml
+values/Strings.xml;values/strings.xml
+drawable/pagerslidingtabstrip_background_tab.xml;drawable/pagerslidingtabstrip_background_tab.xml
+values/Attrs.xml;values/attrs.xml
+values/Colors.xml;values/colors.xml

@@ -1,0 +1,14 @@
+C:\Users\Richard\Documents\GitHub\MDPi\Mobile\MDPi\PagerSlidingTabStrip\bin\Release\PagerSlidingTabStrip.XML
+C:\Users\Richard\Documents\GitHub\MDPi\Mobile\MDPi\PagerSlidingTabStrip\bin\Release\PagerSlidingTabStrip.dll
+C:\Users\Richard\Documents\GitHub\MDPi\Mobile\MDPi\PagerSlidingTabStrip\bin\Release\PagerSlidingTabStrip.PagerSlidingTabStrip.apk
+C:\Users\Richard\Documents\GitHub\MDPi\Mobile\MDPi\PagerSlidingTabStrip\bin\Release\PagerSlidingTabStrip.PagerSlidingTabStrip-Signed.apk
+C:\Users\Richard\Documents\GitHub\MDPi\Mobile\MDPi\PagerSlidingTabStrip\bin\Release\Xamarin.Android.Support.v4.dll
+C:\Users\Richard\Documents\GitHub\MDPi\Mobile\MDPi\PagerSlidingTabStrip\obj\Release\PagerSlidingTabStrip.dll
+C:\Users\Richard\Documents\GitHub\MDPi\Mobile\MDPi\PagerSlidingTabStrip\obj\Release\android\bin\PagerSlidingTabStrip.PagerSlidingTabStrip.apk
+C:\Users\Richard\Documents\GitHub\MDPi\Mobile\MDPi\PagerSlidingTabStrip\obj\Release\res\layout\pagerslidingtabstrip_texttab.xml
+C:\Users\Richard\Documents\GitHub\MDPi\Mobile\MDPi\PagerSlidingTabStrip\obj\Release\res\values\strings.xml
+C:\Users\Richard\Documents\GitHub\MDPi\Mobile\MDPi\PagerSlidingTabStrip\obj\Release\res\drawable\pagerslidingtabstrip_background_tab.xml
+C:\Users\Richard\Documents\GitHub\MDPi\Mobile\MDPi\PagerSlidingTabStrip\obj\Release\res\values\attrs.xml
+C:\Users\Richard\Documents\GitHub\MDPi\Mobile\MDPi\PagerSlidingTabStrip\obj\Release\res\values\colors.xml
+C:\Users\Richard\Documents\GitHub\MDPi\Mobile\MDPi\PagerSlidingTabStrip\obj\Release\R.cs.flag
+C:\Users\Richard\Documents\GitHub\MDPi\Mobile\MDPi\PagerSlidingTabStrip\obj\Release\uploadflags.txt

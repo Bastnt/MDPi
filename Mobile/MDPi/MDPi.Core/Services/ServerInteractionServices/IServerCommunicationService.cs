@@ -9,7 +9,8 @@ namespace MDPi.Core.Services.ServerInteractionServices
 {
     public interface IServerCommunicationService
     {
-        Task<ServerQuery> FetchPersonalServerInformation();
-        Task<ServerQuery> FetchAllServerInformation();
+        Task<ServerQueryResult> FetchPersonalServerInformation();
+        Task<ServerQueryResult> FetchAllServerInformation();
+        Task<ServerQuerySubmit> TrackNewTorrents(IList<NewAnime> animeList);
     }
 }

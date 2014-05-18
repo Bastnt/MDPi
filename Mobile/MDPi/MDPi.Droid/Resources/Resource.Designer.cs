@@ -182,20 +182,29 @@ namespace MDPi.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060002
-			public const int AnimeList = 2131099650;
+			// aapt resource value: 0x7f060006
+			public const int ActionBar = 2131099654;
+			
+			// aapt resource value: 0x7f060003
+			public const int AnimeList = 2131099651;
 			
 			// aapt resource value: 0x7f060000
 			public const int MvxBindingTagUnique = 2131099648;
 			
-			// aapt resource value: 0x7f060003
-			public const int indicator = 2131099651;
-			
-			// aapt resource value: 0x7f060004
-			public const int pager = 2131099652;
+			// aapt resource value: 0x7f060007
+			public const int addTorrentMenuItem = 2131099655;
 			
 			// aapt resource value: 0x7f060001
-			public const int separator2 = 2131099649;
+			public const int editText_AnimeName = 2131099649;
+			
+			// aapt resource value: 0x7f060004
+			public const int indicator = 2131099652;
+			
+			// aapt resource value: 0x7f060005
+			public const int pager = 2131099653;
+			
+			// aapt resource value: 0x7f060002
+			public const int separator2 = 2131099650;
 			
 			static Id()
 			{
@@ -211,25 +220,28 @@ namespace MDPi.Droid
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int BrowseView = 2130903040;
+			public const int AddTorrentView = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int FirstView = 2130903041;
+			public const int BrowseView = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int item_anime = 2130903042;
+			public const int FirstView = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int item_menu = 2130903043;
+			public const int item_anime = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int pagerslidingtabstrip_texttab = 2130903044;
+			public const int item_menu = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int SplashScreen = 2130903045;
+			public const int pagerslidingtabstrip_texttab = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int TorrentsView = 2130903046;
+			public const int SplashScreen = 2130903046;
+			
+			// aapt resource value: 0x7f030007
+			public const int TorrentsView = 2130903047;
 			
 			static Layout()
 			{
@@ -237,6 +249,22 @@ namespace MDPi.Droid
 			}
 			
 			private Layout()
+			{
+			}
+		}
+		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f080000
+			public const int ActionBar = 2131230720;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
 			{
 			}
 		}

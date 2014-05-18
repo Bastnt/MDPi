@@ -3,20 +3,20 @@
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:padding="8dp"
-    android:background="@drawable/bg_card">
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="30sp"
-        local:MvxBind="Text Name"
-        android:fontFamily="sans-serif-light"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+    android:layout_height="fill_parent">
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        local:MvxBind="Text Count"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:fontFamily="sans-serif-light"
+        android:padding="8dp"
+        android:text="Enter the new anime's name:" />
+    <EditText
+        android:id="@+id/editText_AnimeName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-thin"
+        android:padding="8dp"
+        android:hint="New anime name" />
 </LinearLayout>

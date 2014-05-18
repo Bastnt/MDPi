@@ -14,14 +14,19 @@ namespace MDPi.Core.Services.ServerInteractionServices
         {
         }
 
-        public async Task<ServerQuery> FetchPersonalServerInformation()
+        public async Task<ServerQueryResult> FetchPersonalServerInformation()
         {
-            return await Task.Factory.StartNew(() => JsonConvert.DeserializeObject<ServerQuery>(MDPi.Core.Properties.Resources.ServerQueryTestResult));
+            return await Task.Factory.StartNew(() => JsonConvert.DeserializeObject<ServerQueryResult>(MDPi.Core.Properties.Resources.ServerQueryTestResult));
         }
 
-        public async Task<ServerQuery> FetchAllServerInformation()
+        public async Task<ServerQueryResult> FetchAllServerInformation()
         {
-            return await Task.Factory.StartNew(() => JsonConvert.DeserializeObject<ServerQuery>(MDPi.Core.Properties.Resources.ServerQueryTestResult));
+            return await Task.Factory.StartNew(() => JsonConvert.DeserializeObject<ServerQueryResult>(MDPi.Core.Properties.Resources.ServerQueryTestResult));
+        }
+
+        public Task<ServerQuerySubmit> TrackNewTorrents(IList<NewAnime> animeList)
+        {
+            throw new NotImplementedException();
         }
     }
 }

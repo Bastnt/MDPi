@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace MDPi.Core.Models
 {
-    public class ServerQuery
+    public class NewAnime
     {
-        public IList<Anime> Torrents { get; set; }
+        public string Name { get; set; }
     }
 }
