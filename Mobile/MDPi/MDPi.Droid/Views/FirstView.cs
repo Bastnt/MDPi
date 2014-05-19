@@ -20,6 +20,7 @@ using MDPi.Core.Services.ServerInteractionServices;
 using Android.Graphics.Drawables;
 using Android.Support.V4.Widget;
 using Android.Content.PM;
+using System.Windows.Input;
 
 namespace MDPi.Droid.Views
 {
@@ -87,6 +88,10 @@ namespace MDPi.Droid.Views
 
                 case Resource.Id.addTorrentMenuItem:
                     ShowDialog();
+                    return true;
+
+                case Resource.Id.editPreferencesMenuItem:
+                    ((FirstViewModel)ViewModel).SettingsCommand.Execute(string.Empty);
                     return true;
 
                 default:

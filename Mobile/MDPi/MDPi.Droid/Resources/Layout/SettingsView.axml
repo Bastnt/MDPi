@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory
+        android:title="Server Settings">
+        <EditTextPreference
+            android:key="edittext_preference"
+            android:title="Server IP Address"
+            android:summary="The IP Address of your local server hosting and downloading your torrents."
+            android:dialogTitle="Edit Text Preferrence Dialog Title" />
+    </PreferenceCategory>
+</PreferenceScreen>

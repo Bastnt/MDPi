@@ -26,6 +26,8 @@ namespace MDPi.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Refractored.MvxPlugins.Settings.Droid.Resource.String.ApplicationName = global::MDPi.Droid.Resource.String.ApplicationName;
+			global::Refractored.MvxPlugins.Settings.Droid.Resource.String.Hello = global::MDPi.Droid.Resource.String.Hello;
 			global::PagerSlidingTabStrip.Resource.Attribute.dividerColor = global::MDPi.Droid.Resource.Attribute.dividerColor;
 			global::PagerSlidingTabStrip.Resource.Attribute.dividerPadding = global::MDPi.Droid.Resource.Attribute.dividerPadding;
 			global::PagerSlidingTabStrip.Resource.Attribute.indicatorColor = global::MDPi.Droid.Resource.Attribute.indicatorColor;
@@ -194,6 +196,9 @@ namespace MDPi.Droid
 			// aapt resource value: 0x7f060007
 			public const int addTorrentMenuItem = 2131099655;
 			
+			// aapt resource value: 0x7f060008
+			public const int editPreferencesMenuItem = 2131099656;
+			
 			// aapt resource value: 0x7f060001
 			public const int editText_AnimeName = 2131099649;
 			
@@ -238,10 +243,13 @@ namespace MDPi.Droid
 			public const int pagerslidingtabstrip_texttab = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int SplashScreen = 2130903046;
+			public const int SettingsView = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int TorrentsView = 2130903047;
+			public const int SplashScreen = 2130903047;
+			
+			// aapt resource value: 0x7f030008
+			public const int TorrentsView = 2130903048;
 			
 			static Layout()
 			{

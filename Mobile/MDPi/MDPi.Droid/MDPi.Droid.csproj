@@ -43,6 +43,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkSkip />
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <BundleAssemblies>True</BundleAssemblies>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Cirrious.CrossCore">
@@ -72,6 +76,12 @@
     <Reference Include="Mono.Android" />
     <Reference Include="Mono.Android.Export" />
     <Reference Include="mscorlib" />
+    <Reference Include="Refractored.MvxPlugins.Settings">
+      <HintPath>..\packages\Mvx.Plugins.Settings.1.2.0.2\lib\monoandroid\Refractored.MvxPlugins.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="Refractored.MvxPlugins.Settings.Droid">
+      <HintPath>..\packages\Mvx.Plugins.Settings.1.2.0.2\lib\monoandroid\Refractored.MvxPlugins.Settings.Droid.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -91,6 +101,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adapters\MvxViewPagerFragmentAdapter.cs" />
+    <Compile Include="Bootstrap\SettingsPluginBootstrap.cs" />
     <Compile Include="DebugTrace.cs" />
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -100,6 +111,7 @@
     <Compile Include="Views\FirstView.cs" />
     <Compile Include="Views\BrowseView.cs" />
     <Compile Include="Views\AddTorrentView.cs" />
+    <Compile Include="Views\SettingsView.cs" />
     <Compile Include="Views\TorrentsView.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -119,6 +131,9 @@
       <SubType>AndroidResource</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\Layout\AddTorrentView.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\SettingsView.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>

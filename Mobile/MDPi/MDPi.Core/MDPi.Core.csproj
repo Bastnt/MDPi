@@ -38,6 +38,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Helpers\Settings.cs" />
     <Compile Include="Models\NewAnime.cs" />
     <Compile Include="Models\ServerQuerySubmit.cs" />
     <Compile Include="Models\ServerQueryResult.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="ViewModels\AddTorrentViewModel.cs" />
     <Compile Include="ViewModels\BrowseViewModel.cs" />
     <Compile Include="ViewModels\FirstViewModel.cs" />
+    <Compile Include="ViewModels\SettingsViewModel.cs" />
     <Compile Include="ViewModels\TorrentsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -67,6 +69,9 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Refractored.MvxPlugins.Settings">
+      <HintPath>..\packages\Mvx.Plugins.Settings.1.2.0.2\lib\portable-net45+wp8+win8+monoandroid+monotouch\Refractored.MvxPlugins.Settings.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http">
       <HintPath>..\packages\Microsoft.Net.Http.2.2.20\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll</HintPath>

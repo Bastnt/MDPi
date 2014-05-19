@@ -1,7 +1,10 @@
 using Cirrious.MvvmCross.ViewModels;
+using Cirrious.CrossCore.Platform;
+using Cirrious.MvvmCross.ViewModels;
 using MDPi.Core.Models;
 using MDPi.Core.Services.ServerInteractionServices;
 using System.Collections.Generic;
+using System.Windows.Input;
 
 namespace MDPi.Core.ViewModels
 {
@@ -31,6 +34,14 @@ namespace MDPi.Core.ViewModels
         public AddTorrentViewModel AddTorrentViewModel
         {
             get { return addTorrentViewModel; }
+        }
+
+        public ICommand SettingsCommand
+        {
+            get
+            {
+                return new MvxCommand<string>(item => ShowViewModel<SettingsViewModel>(item));
+            }
         }
     }
 }
